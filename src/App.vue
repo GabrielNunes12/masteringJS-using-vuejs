@@ -1,9 +1,6 @@
 <template>
   <div id="app">
-    
-    <div class="cointainer"> 
-      <router-view></router-view> 
-    </div>
+    <router-view></router-view> 
   </div>
 </template>
 

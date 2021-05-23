@@ -15,7 +15,7 @@
             {{ article.value }}
           </p>
           <a href="#" class="btn btn-primary">Go to the store</a>
-          <a href="#" class="btn btn-secondary" @click="removeItens(article)"
+          <a href="#" class="btn btn-secondary" @click="removeItem(article)"
             >Remove it</a
           >
         </div>
@@ -129,7 +129,7 @@ export default {
       this.addAnimeListHeader = "";
       this.addAnimeListDescription = "";
     },
-    removeItens(value) {
+    removeItem(value) {
       const index = this.renderList.listAnimes.indexOf(value);
       this.renderList.listAnimes.splice(index, 1);
     },
