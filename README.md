@@ -8,7 +8,7 @@ English
 
 Built with ❤︎ by Gabriel Nunes and contributors
 
-📌 Table of Contents
+📌 Table of Contents <br />
 Visualization <br/>
 Technologies <br/>
 Features <br/>
