@@ -1,75 +1,80 @@
 <template>
   <div>
     <Header></Header>
-    <div
-      class="card"
-      v-for="(article, index) in renderList.listAnimes"
-      :key="index"
-      :value="article.value"
-    >
-      <div class="card-header">{{ article.header }}</div>
-      <div class="card-body">
-        <h5 class="card-title">{{ article.title }}</h5>
-        <p class="card-text">
-          {{ article.value }}
-        </p>
-        <a href="#" class="btn btn-primary">Go to the store</a>
+    <div class="container">
+      <div
+        class="card"
+        v-for="(article, index) in renderList.listAnimes"
+        :key="index"
+        :value="article.value"
+      >
+        <div class="card-header">{{ article.header }}</div>
+        <div class="card-body">
+          <h5 class="card-title">{{ article.title }}</h5>
+          <p class="card-text">
+            {{ article.value }}
+          </p>
+          <a href="#" class="btn btn-primary">Go to the store</a>
+          <a href="#" class="btn btn-secondary" @click="removeItens(article)"
+            >Remove it</a
+          >
+        </div>
       </div>
+      <template prepend>
+        <b-form @submit.stop.prevent>
+          <b-input-group-text>Add anime</b-input-group-text>
+          <b-form-input
+            v-model="addAnimeListTitle"
+            placeholder="Type your Favorite anime title"
+          ></b-form-input>
+
+          <b-form-invalid-feedback :state="validationTitle">
+            Your Title must be 3 to 100 characters.
+          </b-form-invalid-feedback>
+          <b-form-valid-feedback :state="validationTitle">
+            Looks Good.
+          </b-form-valid-feedback>
+
+          <b-form-input
+            v-model="addAnimeListHeader"
+            placeholder="Type your Favorite anime header"
+          ></b-form-input>
+
+          <b-form-invalid-feedback :state="validationHeader">
+            Your Header must be 3 to 100 characters.
+          </b-form-invalid-feedback>
+          <b-form-valid-feedback :state="validationHeader">
+            Looks Good.
+          </b-form-valid-feedback>
+
+          <b-form-input
+            v-model="addAnimeListDescription"
+            placeholder="Type your Favorite anime description"
+          ></b-form-input>
+
+          <b-form-invalid-feedback :state="validation">
+            Your Description must be 3 to 100 characters.
+          </b-form-invalid-feedback>
+          <b-form-valid-feedback :state="validation">
+            Looks Good.
+          </b-form-valid-feedback>
+
+          <b-button
+            variant="outline-secondary"
+            @click="addSomeAnimes(renderNewList)"
+            >Add anime</b-button
+          >
+        </b-form>
+      </template>
     </div>
-    <template prepend>
-      <b-form @submit.stop.prevent>
-        <b-input-group-text>Add anime</b-input-group-text>
-        <b-form-input
-          v-model="addAnimeListTitle"
-          placeholder="Type your Favorite anime title"
-        ></b-form-input>
-
-        <b-form-invalid-feedback :state="validationTitle">
-          Your Title must be 3 to 100 characters.
-        </b-form-invalid-feedback>
-        <b-form-valid-feedback :state="validationTitle">
-          Looks Good.
-        </b-form-valid-feedback>
-
-        <b-form-input
-          v-model="addAnimeListHeader"
-          placeholder="Type your Favorite anime header"
-        ></b-form-input>
-
-        <b-form-invalid-feedback :state="validationHeader">
-          Your Header must be 3 to 100 characters.
-        </b-form-invalid-feedback>
-        <b-form-valid-feedback :state="validationHeader">
-          Looks Good.
-        </b-form-valid-feedback>
-
-        <b-form-input
-          v-model="addAnimeListDescription"
-          placeholder="Type your Favorite anime description"
-        ></b-form-input>
-
-        <b-form-invalid-feedback :state="validation">
-          Your Description must be 3 to 100 characters.
-        </b-form-invalid-feedback>
-        <b-form-valid-feedback :state="validation">
-          Looks Good.
-        </b-form-valid-feedback>
-
-        <b-button
-          variant="outline-secondary"
-          @click="addSomeAnimes(renderNewList)"
-          >Add anime</b-button
-        >
-      </b-form>
-    </template>
   </div>
 </template>
 <script>
-import Header from './Header.vue'
+import Header from "./Header.vue";
 export default {
   name: "Home",
   props: {},
-  components:{
+  components: {
     Header,
   },
   data() {
@@ -78,7 +83,6 @@ export default {
       addAnimeListHeader: "",
       addAnimeListDescription: "",
       renderList: {
-        
         listAnimes: [],
       },
       renderNewList: [
@@ -124,9 +128,10 @@ export default {
       this.addAnimeListTitle = "";
       this.addAnimeListHeader = "";
       this.addAnimeListDescription = "";
-      this.$computed.validation = () => {};
-      this.$computed.validationHeader = () => {};
-      this.$computed.validationTitle = () => {};
+    },
+    removeItens(value) {
+      const index = this.renderList.listAnimes.indexOf(value);
+      this.renderList.listAnimes.splice(index, 1);
     },
   },
 };

@@ -1,19 +1,213 @@
 <template>
   <div>
-    <Header></Header>
+    <main>
+      <Header></Header>
+      <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+          <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light">Test Anime</h1>
+            <p class="lead text-muted">Your Favorite animes.</p>
+            <p>
+              <a href="#" class="btn btn-primary my-2"> Report </a>
+              <a href="#" class="btn btn-secondary my-2"> Buy a new anime </a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="album py-5 bg-light">
+        <div class="container">
+          <div
+            class="row row-cols-1 row-cols-sm-2 row-cols-md-3 rows-cols-md-3 g-3"
+          >
+            <div class="col">
+              <div class="card-shadow-sm">
+                <!--IMG-->
+                <svg
+                  class="bd-placeholder-img card-img-top"
+                  width="100%"
+                  height="225"
+                  role="img"
+                  aria-label="placeholder: Thumbnail"
+                  focusable="false"
+                  preserveAspectRatio="xMidYMid slice"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>First Anime</title>
+                  <rect width="100%" height="100%" fill="#55595c"></rect>
+                  <text x="50%" height="50%" fill="#eceeef" dy=".3em"></text>
+                </svg>
+              </div>
+              <div class="card-body">
+                <p class="card-text">
+                  This anime was fan made by: Titorei na bara!
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      View
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      Edit
+                    </button>
+                  </div>
+                  <small class="text-muted"> 2 min </small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card-shadow-sm">
+                <!--IMG-->
+                <svg
+                  class="bd-placeholder-img card-img-top"
+                  width="100%"
+                  height="225"
+                  xmlns="http://www.w3.org/2000/svg"
+                  role="img"
+                  aria-label="Placeholder: Thumbnail"
+                  preserveAspectRatio="xMidYMid slice"
+                  focusable="false"
+                >
+                  <title>First Anime</title>
+                  <rect width="100%" height="100%" fill="#55595c"></rect>
+                  <text x="50%" height="50%" fill="#eceeef" dy=".3em"></text>
+                </svg>
+              </div>
+              <div class="card-body">
+                <p class="card-text">
+                  This anime was fan made by: Abarassou maluku!
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      View
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      Edit
+                    </button>
+                  </div>
+                  <small class="text-muted"> 1 min </small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card shadow-sm">
+                <!--IMG-->
+                <svg
+                  class="bd-placeholder-img card-img-top"
+                  width="100%"
+                  height="225"
+                  xmlns="http://www.w3.org/2000/svg"
+                  role="img"
+                  aria-label="Placeholder: Thumbnail"
+                  preserveAspectRatio="xMidYMid slice"
+                  focusable="false"
+                >
+                  <title>First Anime</title>
+                  <rect width="100%" height="100%" fill="#55595c"></rect>
+                  <text x="50%" height="50%" fill="#eceeef" dy=".3em"></text>
+                </svg>
+              </div>
+              <div class="card-body">
+                <p class="card-text">
+                  This anime was fan made by: SeoKu Na Bara!
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      View
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      Edit
+                    </button>
+                  </div>
+                  <small class="text-muted"> 1 min </small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="text-muted py-5">
+      <div class="container">
+        <p class="float-end mb-1">
+          <a href="#">Back to top</a>
+        </p>
+        <p class="mb-1">
+          Project created by
+          <a href="https://github.com/GabrielNunes12"> Gabriel Nunes</a> &copy;
+        </p>
+        <p class="mb-0">
+          My youtube channel <a href="https://youtube.com/c/BielTheGamer12"> Click here! </a>
+        </p>
+      </div>
+    </footer>
   </div>
 </template>
 
 <script>
-import Header from './Header.vue'
+import Header from "./Header.vue";
 export default {
-  components: { 
-    Header 
+  components: {
+    Header,
   },
-
-}
+};
 </script>
 
-<style>
+<style scoped>
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+}
+.shadow-sm {
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+}
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.my-2 {
+  margin-top: .5rem!important;
+  margin-bottom: .5rem!important;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
 
 </style>
