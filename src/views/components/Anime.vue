@@ -20,7 +20,7 @@
           <div
             class="row row-cols-1 row-cols-sm-2 row-cols-md-3 rows-cols-md-3 g-3"
           >
-            <div class="col" v-for="(anime, indexAnime) in listQuotesApi" :key="indexAnime">
+            <div class="col" v-for="(animeQuote, indexAnime) in listQuotesApi" :key="indexAnime">
               <div class="card-shadow-sm">
                 <!--IMG-->
                 <svg
@@ -33,18 +33,18 @@
                   preserveAspectRatio="xMidYMid slice"
                   focusable="false"
                 >
-                  <title>{{anime.anime}}</title>
+                  <title>{{animeQuote.anime}}</title>
                   <rect width="100%" height="100%" fill="#55595c"></rect>
                   <text x="50%" height="50%" fill="#eceeef" dy=".3em"></text>
                 </svg>
               </div>
               <div class="card-body">
                 <p class="card-text">
-                  <strong>Anime:</strong> {{ anime.anime }}
+                  <strong>Anime:</strong> {{ animeQuote.anime }}
                   <br>
-                  <strong>Character:</strong> {{ anime.character }}
+                  <strong>Character:</strong> {{ animeQuote.character }}
                   <br>
-                  <strong>Quote:</strong> {{ anime.quote }}
+                  <strong>Quote:</strong> {{ animeQuote.quote }}
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
