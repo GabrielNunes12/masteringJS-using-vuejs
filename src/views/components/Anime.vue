@@ -5,8 +5,8 @@
       <section class="py-5 text-center container">
         <div class="row py-lg-5">
           <div class="col-lg-6 col-md-8 mx-auto">
-            <h1 class="fw-light">Test Anime</h1>
-            <p class="lead text-muted">Your Favorite animes.</p>
+            <h1 class="fw-light">Anime's Quotes</h1>
+            <p class="lead text-muted">From your Favorite animes.</p>
             <p>
               <a href="#" class="btn btn-primary my-2"> Report </a>
               <a href="#" class="btn btn-secondary my-2"> Buy a new anime </a>
@@ -20,49 +20,7 @@
           <div
             class="row row-cols-1 row-cols-sm-2 row-cols-md-3 rows-cols-md-3 g-3"
           >
-            <div class="col">
-              <div class="card-shadow-sm">
-                <!--IMG-->
-                <svg
-                  class="bd-placeholder-img card-img-top"
-                  width="100%"
-                  height="225"
-                  role="img"
-                  aria-label="placeholder: Thumbnail"
-                  focusable="false"
-                  preserveAspectRatio="xMidYMid slice"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <title>First Anime</title>
-                  <rect width="100%" height="100%" fill="#55595c"></rect>
-                  <text x="50%" height="50%" fill="#eceeef" dy=".3em"></text>
-                </svg>
-              </div>
-              <div class="card-body">
-                <p class="card-text">
-                  This anime was fan made by: Titorei na bara!
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button
-                      type="button"
-                      class="btn btn-sm btn-outline-secondary"
-                    >
-                      View
-                    </button>
-                    <button
-                      type="button"
-                      class="btn btn-sm btn-outline-secondary"
-                    >
-                      Edit
-                    </button>
-                  </div>
-                  <small class="text-muted"> 2 min </small>
-                </div>
-              </div>
-            </div>
-
-            <div class="col">
+            <div class="col" v-for="(anime, indexAnime) in listQuotesApi" :key="indexAnime">
               <div class="card-shadow-sm">
                 <!--IMG-->
                 <svg
@@ -75,56 +33,18 @@
                   preserveAspectRatio="xMidYMid slice"
                   focusable="false"
                 >
-                  <title>First Anime</title>
+                  <title>{{anime.anime}}</title>
                   <rect width="100%" height="100%" fill="#55595c"></rect>
                   <text x="50%" height="50%" fill="#eceeef" dy=".3em"></text>
                 </svg>
               </div>
               <div class="card-body">
                 <p class="card-text">
-                  This anime was fan made by: Abarassou maluku!
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button
-                      type="button"
-                      class="btn btn-sm btn-outline-secondary"
-                    >
-                      View
-                    </button>
-                    <button
-                      type="button"
-                      class="btn btn-sm btn-outline-secondary"
-                    >
-                      Edit
-                    </button>
-                  </div>
-                  <small class="text-muted"> 1 min </small>
-                </div>
-              </div>
-            </div>
-
-            <div class="col">
-              <div class="card shadow-sm">
-                <!--IMG-->
-                <svg
-                  class="bd-placeholder-img card-img-top"
-                  width="100%"
-                  height="225"
-                  xmlns="http://www.w3.org/2000/svg"
-                  role="img"
-                  aria-label="Placeholder: Thumbnail"
-                  preserveAspectRatio="xMidYMid slice"
-                  focusable="false"
-                >
-                  <title>First Anime</title>
-                  <rect width="100%" height="100%" fill="#55595c"></rect>
-                  <text x="50%" height="50%" fill="#eceeef" dy=".3em"></text>
-                </svg>
-              </div>
-              <div class="card-body">
-                <p class="card-text">
-                  This anime was fan made by: SeoKu Na Bara!
+                  <strong>Anime:</strong> {{ anime.anime }}
+                  <br>
+                  <strong>Character:</strong> {{ anime.character }}
+                  <br>
+                  <strong>Quote:</strong> {{ anime.quote }}
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
@@ -168,10 +88,25 @@
 
 <script>
 import Header from "./Header.vue";
+import axios from 'axios';
 export default {
   components: {
     Header,
   },
+  data() {
+    return {
+      animeData: null,
+      baseApiPath: 'https://animechan.vercel.app',
+      listQuotesApi: [],
+    }
+  },
+  async mounted() {
+    try {
+      this.listQuotesApi = await axios.get(`${this.baseApiPath}/api/quotes`).then(resp => this.animeData = resp.data);
+    } catch (error) {
+      throw new Error(error);
+    }
+  }
 };
 </script>
 
