@@ -11,6 +11,7 @@ Built with ❤︎ by Gabriel Nunes and contributors
 📌 Table of Contents <br />
 Visualization <br/>
 Technologies <br/>
+APIs <br/>
 Features <br/>
 How to Run <br/>
 Found a bug? Missing a specific feature? <br/>
@@ -27,6 +28,11 @@ This project was made using the follow technologies:
 Vuejs <br/>
 BootstrapVue <br/>
 VueRouter <br/>
+Axios<br/>
+
+APIs <br/>
+Anime Chan Quotes <br/>
+https://animechan.vercel.app/
 
 🚀 Features <br/>
 Add news. <br/>
