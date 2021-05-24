@@ -27,6 +27,7 @@ This project was made using the follow technologies:
 Vuejs <br/>
 BootstrapVue <br/>
 VueRouter <br/>
+Axios<br/>
 
 🚀 Features <br/>
 Add news. <br/>
