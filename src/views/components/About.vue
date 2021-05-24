@@ -42,7 +42,7 @@
         <b-alert show variant="secondary">
           <h4 class="alert-heading">Sorry but you can't see that page!</h4>
           <p>
-            Unfortunatelly, You do not have permission to see this page, please refresh your browser and try it again.
+            Unfortunately, You do not have permission to see this page, please refresh your browser and try it again.
           </p>
         </b-alert>
       </section>
