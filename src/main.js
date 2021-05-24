@@ -8,8 +8,10 @@ import Home from './views/components/Home.vue';
 import Anime from './views/components/Anime.vue';
 import Faq from './views/components/Faq.vue';
 import About from './views/components/About.vue';
+import axios from 'axios';
 
 
+Vue.use(axios);
 Vue.use(BootstrapVue);
 Vue.use(VueRouter);
 
