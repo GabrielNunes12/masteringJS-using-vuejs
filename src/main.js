@@ -6,7 +6,6 @@ import 'bootstrap-vue/dist/bootstrap-vue.css';
 import VueRouter from 'vue-router';
 import Home from './views/components/Home.vue';
 import Anime from './views/components/Anime.vue';
-import Faq from './views/components/Faq.vue';
 import About from './views/components/About.vue';
 import axios from 'axios';
 
@@ -27,11 +26,6 @@ const router = new VueRouter({
       path: '/anime', 
       name: 'anime',
       component: Anime
-    },
-    {
-      path: '/faq', 
-      name: 'faq',
-      component: Faq
     },
     {
       path: '/about', 

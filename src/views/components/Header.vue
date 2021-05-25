@@ -15,9 +15,6 @@
           <router-link to="/anime" class="nav-link">
             {{ this.showConfig.anime }}
           </router-link>
-          <router-link to="/faq" class="nav-link">
-            {{ this.showConfig.faq }}
-          </router-link>
           <router-link to="/about" class="nav-link">
             {{ this.showConfig.about }}
           </router-link>
