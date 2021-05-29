@@ -91,7 +91,6 @@ export default {
   },
   methods: {
     changeLang(language) {
-      console.log(language);
       Vue.config.lang = language;
       this.$i18n.locale = Vue.config.lang;
     }
