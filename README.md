@@ -29,6 +29,7 @@ Vuejs <br/>
 BootstrapVue <br/>
 VueRouter <br/>
 Axios<br/>
+vue-i18n<br/>
 
 APIs <br/>
 Anime Chan Quotes <br/>
@@ -37,6 +38,8 @@ https://animechan.vercel.app/
 🚀 Features <br/>
 Add news. <br/>
 Buy anime on Anime section <br/>
+Multi-lingual project using vue-i18n <br/>
+Supported languages: En, pt-Br, Fr, Es (on going) <br/>
 
 👷 How to run <br/>
 # Clone Repository <br/>
