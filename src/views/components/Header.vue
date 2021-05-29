@@ -32,17 +32,6 @@
             >
           </b-nav-form>
 
-          <b-nav-item-dropdown text="Lang" right>
-            <b-dropdown-item
-              href="#"
-              v-for="(country, index) in renderList.listCountries"
-              :key="index"
-              :value="country.value"
-            >
-              <b-dropdown-item> {{ country.value }} </b-dropdown-item>
-            </b-dropdown-item>
-          </b-nav-item-dropdown>
-
           <b-nav-item-dropdown right>
             <template #button-content>
               <em>User</em>
@@ -69,20 +58,6 @@ export default {
     return {
       showConfig: {},
       renderList: {
-        listCountries: [
-          {
-            value: "BR",
-          },
-          {
-            value: "ES",
-          },
-          {
-            value: "FA",
-          },
-          {
-            value: "RU",
-          },
-        ],
         listUsers: [
           {
             value: "Profile",
