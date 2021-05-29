@@ -1,3 +1,16 @@
 {
-  "goToStore": "Go to the store"
+  "goToStore": "Go to the store",
+  "remove": "Remove it",
+  "Add_anime": "Adicionar Anime",
+  "titleValidation": "Your Title must be 3 to 100 characters.",
+  "validationHeader": "Your Header must be 3 to 100 characters.",
+  "looksGood": "Looks Good.",
+  "validationDescription": "Your Description must be 3 to 100 characters.",
+  "character": "Character",
+  "quote": "Quote",
+  "view": "View",
+  "edit": "Edit",
+  "backToTop": "Back to top",
+  "report": "Report",
+  "buyNewAnime": "Buy a new anime"
 }

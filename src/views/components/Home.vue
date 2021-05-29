@@ -14,25 +14,25 @@
           <p class="card-text">
             {{ article.value }}
           </p>
-          <a href="#" class="btn btn-primary" v-t=""></a>
-          <a href="#" class="btn btn-secondary" @click="removeItem(article)"
-            >Remove it</a
-          >
+          <a href="#" class="btn btn-primary">{{ $t('goToStore') }}</a>
+          <a href="#" class="btn btn-secondary" @click="removeItem(article)">{{
+            $t("remove")
+          }}</a>
         </div>
       </div>
       <template prepend>
         <b-form @submit.stop.prevent>
-          <b-input-group-text>Add anime</b-input-group-text>
+          <b-input-group-text>{{ $t("Add_anime") }}</b-input-group-text>
           <b-form-input
             v-model="addAnimeListTitle"
             placeholder="Type your Favorite anime title"
           ></b-form-input>
 
           <b-form-invalid-feedback :state="validationTitle">
-            Your Title must be 3 to 100 characters.
+            {{ $t("titleValidation") }}
           </b-form-invalid-feedback>
           <b-form-valid-feedback :state="validationTitle">
-            Looks Good.
+            {{ $t("looksGood") }}
           </b-form-valid-feedback>
 
           <b-form-input
@@ -41,10 +41,10 @@
           ></b-form-input>
 
           <b-form-invalid-feedback :state="validationHeader">
-            Your Header must be 3 to 100 characters.
+            {{ $t("validationHeader") }}
           </b-form-invalid-feedback>
           <b-form-valid-feedback :state="validationHeader">
-            Looks Good.
+            {{ $t("looksGood") }}
           </b-form-valid-feedback>
 
           <b-form-input
@@ -53,16 +53,16 @@
           ></b-form-input>
 
           <b-form-invalid-feedback :state="validation">
-            Your Description must be 3 to 100 characters.
+            {{ $t("validationDescription") }}
           </b-form-invalid-feedback>
           <b-form-valid-feedback :state="validation">
-            Looks Good.
+            {{ $t("looksGood") }}
           </b-form-valid-feedback>
 
           <b-button
             variant="outline-secondary"
             @click="addSomeAnimes(renderNewList)"
-            >Add anime</b-button
+            >{{ $t("Add_anime") }}</b-button
           >
         </b-form>
       </template>

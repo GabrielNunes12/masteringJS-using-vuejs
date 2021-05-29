@@ -8,8 +8,10 @@
             <h1 class="fw-light">Anime's Quotes</h1>
             <p class="lead text-muted">From your Favorite animes.</p>
             <p>
-              <a href="#" class="btn btn-primary my-2"> Report </a>
-              <a href="#" class="btn btn-secondary my-2"> Buy a new anime </a>
+              <a href="#" class="btn btn-primary my-2"> {{ $t("report") }} </a>
+              <a href="#" class="btn btn-secondary my-2">
+                {{ $t("buyNewAnime") }}</a
+              >
             </p>
           </div>
         </div>
@@ -20,7 +22,11 @@
           <div
             class="row row-cols-1 row-cols-sm-2 row-cols-md-3 rows-cols-md-3 g-3"
           >
-            <div class="col" v-for="(animeQuote, indexAnime) in listQuotesApi" :key="indexAnime">
+            <div
+              class="col"
+              v-for="(animeQuote, indexAnime) in listQuotesApi"
+              :key="indexAnime"
+            >
               <div class="card-shadow-sm">
                 <!--IMG-->
                 <svg
@@ -33,7 +39,7 @@
                   preserveAspectRatio="xMidYMid slice"
                   focusable="false"
                 >
-                  <title>{{animeQuote.anime}}</title>
+                  <title>{{ animeQuote.anime }}</title>
                   <rect width="100%" height="100%" fill="#55595c"></rect>
                   <text x="50%" height="50%" fill="#eceeef" dy=".3em"></text>
                 </svg>
@@ -41,10 +47,11 @@
               <div class="card-body">
                 <p class="card-text">
                   <strong>Anime:</strong> {{ animeQuote.anime }}
-                  <br>
-                  <strong>Character:</strong> {{ animeQuote.character }}
-                  <br>
-                  <strong>Quote:</strong> {{ animeQuote.quote }}
+                  <br />
+                  <strong>{{ $t("character") }}:</strong>
+                  {{ animeQuote.character }}
+                  <br />
+                  <strong>{{ $t("quote") }}:</strong> {{ animeQuote.quote }}
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
@@ -52,13 +59,13 @@
                       type="button"
                       class="btn btn-sm btn-outline-secondary"
                     >
-                      View
+                      {{ $t("view") }}
                     </button>
                     <button
                       type="button"
                       class="btn btn-sm btn-outline-secondary"
                     >
-                      Edit
+                      {{ $t("edit") }}
                     </button>
                   </div>
                   <small class="text-muted"> 1 min </small>
@@ -72,14 +79,15 @@
     <footer class="text-muted py-5">
       <div class="container">
         <p class="float-end mb-1">
-          <a href="#">Back to top</a>
+          <a href="#">{{ $t("backToTop") }}</a>
         </p>
         <p class="mb-1">
           Project created by
           <a href="https://github.com/GabrielNunes12"> Gabriel Nunes</a> &copy;
         </p>
         <p class="mb-0">
-          My youtube channel <a href="https://youtube.com/c/BielTheGamer12"> Click here! </a>
+          My youtube channel
+          <a href="https://youtube.com/c/BielTheGamer12"> Click here! </a>
         </p>
       </div>
     </footer>
@@ -88,7 +96,7 @@
 
 <script>
 import Header from "./Header.vue";
-import axios from 'axios';
+import axios from "axios";
 export default {
   components: {
     Header,
@@ -96,22 +104,23 @@ export default {
   data() {
     return {
       animeData: null,
-      baseApiPath: 'https://animechan.vercel.app',
+      baseApiPath: "https://animechan.vercel.app",
       listQuotesApi: [],
-    }
+    };
   },
   async mounted() {
     try {
-      this.listQuotesApi = await axios.get(`${this.baseApiPath}/api/quotes`).then(resp => this.animeData = resp.data);
+      this.listQuotesApi = await axios
+        .get(`${this.baseApiPath}/api/quotes`)
+        .then((resp) => (this.animeData = resp.data));
     } catch (error) {
       throw new Error(error);
     }
-  }
+  },
 };
 </script>
 
 <style scoped>
-
 .card {
   position: relative;
   display: flex;
@@ -120,11 +129,11 @@ export default {
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  border: 1px solid rgba(0,0,0,.125);
-  border-radius: .25rem;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
 }
 .shadow-sm {
-  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
 }
 p {
   display: block;
@@ -135,8 +144,8 @@ p {
 }
 
 .my-2 {
-  margin-top: .5rem!important;
-  margin-bottom: .5rem!important;
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
 }
 
 .btn-primary {
@@ -144,5 +153,4 @@ p {
   background-color: #0d6efd;
   border-color: #0d6efd;
 }
-
 </style>
