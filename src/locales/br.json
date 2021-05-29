@@ -1,3 +1,16 @@
 {
-  "goToStore": "Ir para loja"
+  "goToStore": "Ir para loja",
+  "remove": "Remover",
+  "Add_anime": "Adicionar Anime",
+  "titleValidation": "Seu titulo deve ter entre 3 a 100 caracteres.",
+  "validationHeader": "Seu header deve ter entre 3 a 100 caracteres.",
+  "looksGood": "Parece bom",
+  "validationDescription": "Sua descrição deve ter entre 3 a 100 caracteres.",
+  "character": "Personagem",
+  "quote": "Fala",
+  "view": "Visualizar",
+  "edit": "Editar",
+  "backToTop": "Voltar ao topo",
+  "report": "Reportar",
+  "buyNewAnime": "Comprar um anime"
 }
