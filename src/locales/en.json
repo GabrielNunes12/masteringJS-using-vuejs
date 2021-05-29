@@ -12,5 +12,9 @@
   "edit": "Edit",
   "backToTop": "Back to top",
   "report": "Report",
-  "buyNewAnime": "Buy a new anime"
+  "buyNewAnime": "Buy a new anime",
+  "search": "Search",
+  "clickHere": "Click Here!",
+  "permissionDenied": "Sorry but you can't see that page!",
+  "permissionsToSee": "Unfortunately, You do not have permission to see this page, please refresh your browser and try it again."
 }
