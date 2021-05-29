@@ -45,6 +45,20 @@
               <b-dropdown-item href="#">{{ profile.value }}</b-dropdown-item>
             </b-dropdown-item>
           </b-nav-item-dropdown>
+
+          <b-nav-item-dropdown right>
+            <template #button-content>
+              <em>Langs</em>
+            </template>
+            <b-dropdown-item
+              href="#"
+              v-for="(lang, index) in renderList.listLangs"
+              :key="`Lang${index}`"
+              :value="lang"
+            >
+              <b-dropdown-item href="#">{{ lang }}</b-dropdown-item>
+            </b-dropdown-item>
+          </b-nav-item-dropdown>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
@@ -58,6 +72,7 @@ export default {
     return {
       showConfig: {},
       renderList: {
+        listLangs: ['Ja','En','Br'],
         listUsers: [
           {
             value: "Profile",
