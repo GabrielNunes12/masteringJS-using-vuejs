@@ -8,6 +8,7 @@ import Home from './views/components/Home.vue';
 import Anime from './views/components/Anime.vue';
 import About from './views/components/About.vue';
 import axios from 'axios';
+import i18n from './i18n'
 
 
 Vue.use(axios);
@@ -39,5 +40,8 @@ Vue.config.productionTip = false
 
 new Vue({
   router,
+  i18n,
   render: h => h(App)
 }).$mount('#app')
+
+i18n.locale = 'en';

@@ -14,7 +14,7 @@
           <p class="card-text">
             {{ article.value }}
           </p>
-          <a href="#" class="btn btn-primary">Go to the store</a>
+          <a href="#" class="btn btn-primary">{{ $t("Go to store") }}</a>
           <a href="#" class="btn btn-secondary" @click="removeItem(article)"
             >Remove it</a
           >
@@ -66,16 +66,19 @@
           >
         </b-form>
       </template>
+      <locale-switcher />
     </div>
   </div>
 </template>
 <script>
 import Header from "./Header.vue";
+import LocaleSwitcher from "./LocaleSwitcher.vue";
 export default {
   name: "Home",
   props: {},
   components: {
     Header,
+    LocaleSwitcher,
   },
   data() {
     return {
