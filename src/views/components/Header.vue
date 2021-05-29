@@ -28,7 +28,7 @@
               placeholder="Search"
             ></b-form-input>
             <b-button size="sm" class="my-2 my-sm-0" type="submit"
-              >Search</b-button
+              >{{$t('search')}}</b-button
             >
           </b-nav-form>
 

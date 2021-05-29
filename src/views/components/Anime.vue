@@ -87,7 +87,7 @@
         </p>
         <p class="mb-0">
           My youtube channel
-          <a href="https://youtube.com/c/BielTheGamer12"> Click here! </a>
+          <a href="https://youtube.com/c/BielTheGamer12"> {{$t('clickHere')}} </a>
         </p>
       </div>
     </footer>

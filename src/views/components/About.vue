@@ -40,9 +40,9 @@
 
       <section v-if="!this.showAlert">
         <b-alert show variant="secondary">
-          <h4 class="alert-heading">Sorry but you can't see that page!</h4>
+          <h4 class="alert-heading">{{$t('permissionDenied')}}</h4>
           <p>
-            Unfortunately, You do not have permission to see this page, please refresh your browser and try it again.
+            {{$t('permissionsToSee')}}
           </p>
         </b-alert>
       </section>
