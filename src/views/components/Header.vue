@@ -56,7 +56,7 @@
               :key="`Lang${index}`"
               :value="lang"
             >
-              <b-dropdown-item href="#">{{ lang }}</b-dropdown-item>
+              <b-dropdown-item href="#" @click="changeLang(lang)">{{ lang }}</b-dropdown-item>
             </b-dropdown-item>
           </b-nav-item-dropdown>
         </b-navbar-nav>
@@ -67,12 +67,14 @@
 
 <script>
 import { config } from "../../utils.js";
+import Vue from 'vue'
 export default {
   data() {
     return {
+      activeLocale: Vue.config.lang,
       showConfig: {},
       renderList: {
-        listLangs: ['Ja','En','Br'],
+        listLangs: ['en','br'],
         listUsers: [
           {
             value: "Profile",
@@ -87,6 +89,13 @@ export default {
   created() {
     this.showConfig = { ...config };
   },
+  methods: {
+    changeLang(language) {
+      console.log(language);
+      Vue.config.lang = language;
+      this.$i18n.locale = Vue.config.lang;
+    }
+  }
 };
 </script>
 
