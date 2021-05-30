@@ -19,5 +19,12 @@
   "permissionsToSee": "Unfortunately, You do not have permission to see this page, please refresh your browser and try it again.",
   "user": "User",
   "animeQuote": "Anime's Quotes",
-  "yourFavoriteAnimes": "From your Favorite animes."
+  "yourFavoriteAnimes": "From your Favorite animes.",
+  "projectCreated": "Project created by",
+  "youtubeChannel": "My youtube channel",
+  "langs": "Languages",
+  "aboutSection1": "This web-app was made by Gabriel Nunes, he did it all by himself.",
+  "aboutSubSection1": "All these buttons and headers that you saw on the app, was made by him too.",
+  "aboutSection2": "If you need anything from him, please contact via social netorks.",
+  "aboutSubSection2": "Social networks:"
 }
