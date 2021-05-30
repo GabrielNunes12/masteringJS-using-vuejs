@@ -28,7 +28,6 @@
               :key="indexAnime"
             >
               <div class="card-shadow-sm">
-                <!--IMG-->
                 <svg
                   class="bd-placeholder-img card-img-top"
                   width="100%"
@@ -82,11 +81,11 @@
           <a href="#">{{ $t("backToTop") }}</a>
         </p>
         <p class="mb-1">
-          Project created by
+          {{$t('projectCreated')}}
           <a href="https://github.com/GabrielNunes12"> Gabriel Nunes</a> &copy;
         </p>
         <p class="mb-0">
-          My youtube channel
+          {{$t('youtubeChannel')}}
           <a href="https://youtube.com/c/BielTheGamer12"> {{$t('clickHere')}} </a>
         </p>
       </div>

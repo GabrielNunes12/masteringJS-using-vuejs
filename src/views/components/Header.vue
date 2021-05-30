@@ -48,7 +48,7 @@
 
           <b-nav-item-dropdown right>
             <template #button-content>
-              <em>Langs</em>
+              <em>{{$t('langs')}}</em>
             </template>
             <b-dropdown-item
               href="#"

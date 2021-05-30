@@ -19,5 +19,12 @@
   "permissionsToSee": "Infelizmente, você não tem permissão para ver essa página, por favor reinicia seu navegador e tente novamente.",
   "user": "Usuário",
   "animeQuote": "Falas de animes",
-  "yourFavoriteAnimes": "Do seus animes favoritos."
+  "yourFavoriteAnimes": "Do seus animes favoritos.",
+  "projectCreated": "Projeto criado por",
+  "youtubeChannel": "Meu canal do youtube",
+  "langs": "Idiomas",
+  "aboutSection1": "Este web-app foi feito por Gabriel Nunes, ele fez tudo isso.",
+  "aboutSubSection1": "Todos estes botões e headers que você viu neste app, foi feito por ele também.",
+  "aboutSection2": "Se precisa de algo dele, por favor o contate via rede social.",
+  "aboutSubSection2": "Redes sociais"
 }

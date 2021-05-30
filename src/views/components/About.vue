@@ -6,14 +6,13 @@
         <b-alert show variant="success">
           <h4 class="alert-heading">Well done!</h4>
           <p>
-            This web-app was made by Gabriel Nunes, he did it all by himself.
-            All these buttons and headers that you saw on the app, was made by
-            him too.
+            {{$t('aboutSection1')}} <br/>
+            {{$t('aboutSubSection1')}}
           </p>
           <hr />
           <p class="mb-0">
-            If you need anything from him, please contact via social netorks.
-            Social networks:
+            {{$t('aboutSection2')}} <br/>
+            {{$t('aboutSubSection2')}}
             <ul>
               <li>
                 <a :href="this.showImg.facebook.href" target="_blank">
