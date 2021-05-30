@@ -16,5 +16,8 @@
   "search": "Search",
   "clickHere": "Click Here!",
   "permissionDenied": "Sorry but you can't see that page!",
-  "permissionsToSee": "Unfortunately, You do not have permission to see this page, please refresh your browser and try it again."
+  "permissionsToSee": "Unfortunately, You do not have permission to see this page, please refresh your browser and try it again.",
+  "user": "User",
+  "animeQuote": "Anime's Quotes",
+  "yourFavoriteAnimes": "From your Favorite animes."
 }

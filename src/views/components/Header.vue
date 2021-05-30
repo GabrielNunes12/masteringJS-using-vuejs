@@ -34,7 +34,7 @@
 
           <b-nav-item-dropdown right>
             <template #button-content>
-              <em>User</em>
+              <em>{{$t('user')}}</em>
             </template>
             <b-dropdown-item
               href="#"
