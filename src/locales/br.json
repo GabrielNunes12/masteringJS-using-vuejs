@@ -16,5 +16,8 @@
   "search": "Pesquisar",
   "clickHere": "Clique aqui!",
   "permissionDenied": "Desculpa, mas você não pode ver essa página!",
-  "permissionsToSee": "Infelizmente, você não tem permissão para ver essa página, por favor reinicia seu navegador e tente novamente."
+  "permissionsToSee": "Infelizmente, você não tem permissão para ver essa página, por favor reinicia seu navegador e tente novamente.",
+  "user": "Usuário",
+  "animeQuote": "Falas de animes",
+  "yourFavoriteAnimes": "Do seus animes favoritos."
 }
