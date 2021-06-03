@@ -30,6 +30,7 @@ BootstrapVue <br/>
 VueRouter <br/>
 Axios<br/>
 vue-i18n<br/>
+Jest <br/>
 
 APIs <br/>
 Anime Chan Quotes <br/>
@@ -40,6 +41,7 @@ Add news. <br/>
 Buy anime on Anime section <br/>
 Multi-lingual project using vue-i18n <br/>
 Supported languages: En, pt-Br, Fr, Es (on going) <br/>
+Unit testing using Jest <br/>
 
 👷 How to run <br/>
 # Clone Repository <br/>

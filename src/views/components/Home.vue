@@ -70,10 +70,16 @@
   </div>
 </template>
 <script>
+import { eventBus } from '../../main.js';
 import Header from "./Header.vue";
 export default {
   name: "Home",
-  props: {},
+  props: {
+    objProps: {
+      type: Object,
+      required: false,
+    }
+  },
   components: {
     Header,
   },
@@ -122,6 +128,7 @@ export default {
         title: this.addAnimeListTitle,
       };
       this.renderList.listAnimes.push(newObj);
+      eventBus.addAnime(this.renderList.listAnimes);
       this.clearForm();
     },
     clearForm() {
