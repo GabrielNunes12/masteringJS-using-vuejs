@@ -9,13 +9,13 @@
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
-          <router-link to="/" class="nav-link">
+          <router-link to="/" class="nav-link" exact>
             {{ this.showConfig.home }}
           </router-link>
-          <router-link to="/anime" class="nav-link">
+          <router-link to="/anime" class="nav-link" exact>
             {{ this.showConfig.anime }}
           </router-link>
-          <router-link to="/about" class="nav-link">
+          <router-link to="/about" class="nav-link" exact>
             {{ this.showConfig.about }}
           </router-link>
         </b-navbar-nav>
