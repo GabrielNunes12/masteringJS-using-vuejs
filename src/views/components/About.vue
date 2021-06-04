@@ -45,6 +45,7 @@
           </p>
         </b-alert>
       </section>
+      <button class="btn float-end mb-1" @click="goToHome">{{$t('goBackToHome')}}</button>
     </main>
   </div>
 </template>
@@ -66,7 +67,11 @@ export default {
     this.showAlert = confirm("Are you sure about this?");
     this.showImg = { ...pathImgObj };
   },
-  methods: {},
+  methods: {
+    goToHome() {
+      this.$router.push({ path: '/' });
+    }
+  },
 };
 </script>
 
