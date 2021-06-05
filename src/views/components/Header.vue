@@ -56,7 +56,7 @@
               :key="`Lang${index}`"
               :value="lang"
             >
-              <b-dropdown-item href="#" @click="changeLang(lang)">{{ lang }}</b-dropdown-item>
+              <b-dropdown-item href="#" @click="changeLang(lang)">{{ lang.toUpperCase() }}</b-dropdown-item>
             </b-dropdown-item>
           </b-nav-item-dropdown>
         </b-navbar-nav>
