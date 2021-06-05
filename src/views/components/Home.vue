@@ -122,6 +122,7 @@ export default {
   },
   methods: {
     addSomeAnimes() {
+      if(!this.renderNewList.value && !this.renderNewList.header && !this.renderNewList.title) return;
       const newObj = {
         value: this.addAnimeListDescription,
         header: this.addAnimeListHeader,
