@@ -133,8 +133,8 @@
       </div>
     </main>
     <footer class="text-muted py-5">
-      <div class="container">
-        <p class="float-end mb-1">
+      <div class="container right-side">
+        <p class="mb-1">
           <a href="#">{{ $t("backToTop") }}</a>
         </p>
         <p class="mb-1">
@@ -186,6 +186,11 @@ export default {
 </script>
 
 <style scoped>
+.right-side {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 .card {
   position: relative;
   display: flex;
