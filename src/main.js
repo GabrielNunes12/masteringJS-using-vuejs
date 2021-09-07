@@ -9,6 +9,7 @@ import firebaseVue from './firebase';
 
 import axios from "axios";
 import { i18n } from "./i18n";
+import store from './store'
 
 Vue.use(axios);
 Vue.use(BootstrapVue);
@@ -20,13 +21,14 @@ export const eventBus = new Vue({
     addAnime(newestAnime) {
       this.$emit('addAnime', newestAnime);
     }
-  },
+  }
 });
 
 Vue.config.productionTip = false;
 
 new Vue({
   router,
+  store,
   i18n,
   render: (h) => h(App),
 }).$mount("#app");
